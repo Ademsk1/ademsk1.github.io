@@ -133,7 +133,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "https://ademsk1.github.io/blog/"
+baseurl: "/blog"
 
 # ------------ The following options are not recommended to be modified ------------------
 
