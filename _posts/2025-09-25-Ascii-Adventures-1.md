@@ -132,6 +132,29 @@ See the weird tick like effect? I'm obsessed.
 With iframes, and a bit of white-space masking, you can make text out of it!
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const iframes = document.querySelectorAll("iframe");
+
+  iframes.forEach((iframe) => {
+    iframe.onload = () => {
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      const style = iframeDoc.createElement("style");
+      style.textContent = `
+        body {
+          background-color: #121212 !important;
+          color: #e0e0e0 !important;
+        }
+        a { color: #90caf9 !important; }
+      `;
+      iframeDoc.head.appendChild(style);
+    };
+  });
+});
+</script>
+
+
+
 
 <div style="position: relative; width: 420px; height: 120px; overflow: hidden;">
   <!-- IFRAME BACKGROUND -->
