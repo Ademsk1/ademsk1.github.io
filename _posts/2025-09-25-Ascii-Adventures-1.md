@@ -119,6 +119,8 @@ I omitted the dashes. And the result I get is really enjoyable to watch! Hover y
 
 I've gotta say, I love how unintrusive it is - it feels like it naturally goes into the screen. Not sure about how it will look in dark mode though. And with the `getChars` function you can modify the equation a touch more to get a spiral effect! 
 
+One last change I've made is the FPS. One of these alone was working up to 1.5 cores consumption. By setting it to a nice 20fps, that brought CPU down to 0.3. Who said ASCII was cheap. 
+
 <iframe src="https://ademsk1.github.io/ascii-motion/spiral/?frequency=5" width="680" height="300"></iframe>
 
 
@@ -142,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const style = iframeDoc.createElement("style");
       style.textContent = `
         body {
-          background-color: #121212 !important;
+          background-color: var(--main-bg) !important;
           color: #e0e0e0 !important;
         }
         a { color: #90caf9 !important; }
@@ -164,33 +166,33 @@ document.addEventListener("DOMContentLoaded", () => {
   <!-- WHITE MASKS (cover parts to carve HELLO) -->
   
   <!-- Space between H and E -->
-  <div style="position:absolute; left:60px; top:0; width:20px; height:120px; background:white;"></div>
+  <div style="position:absolute; left:60px; top:0; width:20px; height:120px; background-color:var(--main-bg);"></div>
 
   <!-- Space between E and L -->
-  <div style="position:absolute; left:140px; top:0; width:20px; height:120px; background:white;"></div>
+  <div style="position:absolute; left:140px; top:0; width:20px; height:120px; background-color:var(--main-bg);;"></div>
 
   <!-- Space between L and L -->
-  <div style="position:absolute; left:220px; top:0; width:20px; height:120px; background:white;"></div>
+  <div style="position:absolute; left:220px; top:0; width:20px; height:120px; background-color:var(--main-bg);;"></div>
 
   <!-- Space between L and O -->
-  <div style="position:absolute; left:300px; top:0; width:20px; height:120px; background:white;"></div>
+  <div style="position:absolute; left:300px; top:0; width:20px; height:120px; background-color:var(--main-bg);;"></div>
 
   <!-- H holes -->
-  <div style="position:absolute; left:20px; top:0; width:20px; height:40px; background:white;"></div>
-  <div style="position:absolute; left:20px; top:60px; width:20px; height:60px; background:white;"></div>
+  <div style="position:absolute; left:20px; top:0; width:20px; height:40px; background-color:var(--main-bg);"></div>
+  <div style="position:absolute; left:20px; top:60px; width:20px; height:60px; background-color:var(--main-bg);"></div>
 
   <!-- E holes -->
-  <div style="position:absolute; left:100px; top:20px; width:40px; height:20px; background:white;"></div>
-  <div style="position:absolute; left:100px; top:60px; width:40px; height:40px; background:white;"></div>
+  <div style="position:absolute; left:100px; top:20px; width:40px; height:20px; background-color:var(--main-bg);"></div>
+  <div style="position:absolute; left:100px; top:60px; width:40px; height:40px; background-color:var(--main-bg);"></div>
 
   <!-- L holes -->
-  <div style="position:absolute; left:180px; top:0; width:40px; height:100px; background:white;"></div>
+  <div style="position:absolute; left:180px; top:0; width:40px; height:100px; background-color:var(--main-bg);"></div>
 
   <!-- Second L holes -->
-  <div style="position:absolute; left:260px; top:0; width:40px; height:100px; background:white;"></div>
+  <div style="position:absolute; left:260px; top:0; width:40px; height:100px; background-color:var(--main-bg);"></div>
 
   <!-- O hole -->
-  <div style="position:absolute; left:350px; top:20px; width:40px; height:80px; background:white;"></div>
+  <div style="position:absolute; left:350px; top:20px; width:40px; height:80px; background-color:var(--main-bg);"></div>
 </div>
 
 
