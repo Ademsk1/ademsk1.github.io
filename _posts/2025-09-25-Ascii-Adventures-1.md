@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const style = iframeDoc.createElement("style");
       style.textContent = `
         body {
-          background-color: var(--main-bg) !important;
+          background-color: #121212 !important;
           color: #e0e0e0 !important;
         }
         a { color: #90caf9 !important; }
