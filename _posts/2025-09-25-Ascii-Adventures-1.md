@@ -44,7 +44,7 @@ function chooseChar(angle, t) {
 }
 ```
 
-This seems far less verbose than it should be, but this actually suited me quite well. We have an angle from -90 - 90 degrees - so 180 degree range - we shift up by $\pi$ if it's negative to get a positive range. I wanted to divvy this range into 4 segments (hence the `Math.PI / 4`) - then I divided the angle to get the char index I wanted. 
+This seems far less verbose than it should be, but this actually suited me quite well. We have an angle from -90 - 90 degrees - so 180 degree rang - we shift up by $\pi$ (edit: this is clearly a mistake. But nothing changes if you have $\pi / 2$) if it's negative to get a positive range. I wanted to divvy this range into 4 segments (hence the `Math.PI / 4`) - then I divided the angle to get the char index I wanted. 
 
 It's certainly not a generic solution to getting chars in the right place, but it will definitely work for this scenario! 
 
@@ -134,26 +134,6 @@ See the weird tick like effect? I'm obsessed.
 With iframes, and a bit of white-space masking, you can make text out of it!
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const iframes = document.querySelectorAll("iframe");
-
-  iframes.forEach((iframe) => {
-    iframe.onload = () => {
-      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      const style = iframeDoc.createElement("style");
-      style.textContent = `
-        body {
-          background-color: #121212 !important;
-          color: #e0e0e0 !important;
-        }
-        a { color: #90caf9 !important; }
-      `;
-      iframeDoc.head.appendChild(style);
-    };
-  });
-});
-</script>
 
 
 
